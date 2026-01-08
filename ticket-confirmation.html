@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Monu Kushwaha Travels</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#0b0f1a;
+  --card:rgba(255,255,255,0.08);
+  --border:rgba(255,255,255,0.15);
+  --primary:#38bdf8;
+  --accent:#22c55e;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+}
+
+body{
+  background:radial-gradient(circle at top,#0f1e3a,#050712);
+  color:var(--text);
+}
+
+/* NAVBAR */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  backdrop-filter:blur(12px);
+  background:rgba(0,0,0,0.45);
+  border-bottom:1px solid var(--border);
+  z-index:1000;
+}
+
+.nav-wrap{
+  max-width:1200px;
+  margin:auto;
+  padding:18px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-size:20px;
+  font-weight:700;
+}
+
+nav a{
+  margin-left:24px;
+  color:var(--muted);
+  text-decoration:none;
+  font-size:14px;
+}
+
+nav a:hover{color:white}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:120px 20px 60px;
+}
+
+.hero-box{max-width:900px}
+
+.hero h1{
+  font-size:56px;
+  line-height:1.1;
+  margin-bottom:20px;
+}
+
+.hero span{color:var(--primary)}
+
+.hero p{
+  font-size:18px;
+  color:var(--muted);
+  margin-bottom:40px;
+}
+
+.btn{
+  padding:14px 36px;
+  background:var(--primary);
+  color:#020617;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:700;
+  display:inline-block;
+}
+
+/* SECTION */
+section{
+  max-width:1200px;
+  margin:auto;
+  padding:100px 20px;
+}
+
+.section-title{
+  font-size:32px;
+  margin-bottom:40px;
+}
+
+/* GRID / CARDS */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:24px;
+}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:28px;
+  backdrop-filter:blur(16px);
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+}
+
+/* CONTACT */
+.contact-box{
+  background:linear-gradient(135deg,rgba(56,189,248,0.15),rgba(34,197,94,0.1));
+  border:1px solid var(--border);
+  border-radius:22px;
+  padding:50px;
+  text-align:center;
+}
+
+/* INSTAGRAM */
+.insta{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 28px;
+  border-radius:999px;
+  background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af);
+  color:white;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:40px 20px;
+  color:var(--muted);
+  border-top:1px solid var(--border);
+}
+
+@media(max-width:600px){
+  .hero h1{font-size:38px;}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="nav-wrap">
+    <div class="logo">Monu Kushwaha Travels</div>
+    <div>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#routes">Routes</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-box">
+    <h1>Your Journey Begins<br><span>With Monu Kushwaha</span></h1>
+    <p>Safe, reliable and affordable travel solutions for every journey.</p>
+    <a href="#contact" class="btn">Book Your Journey</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2 class="section-title">About Us</h2>
+  <p style="max-width:780px;color:var(--muted);line-height:1.7;">
+    Monu Kushwaha Travels is a trusted travelling agency providing comfortable
+    and safe travel services. We believe every journey should be smooth,
+    affordable and stress-free — whether local or long distance.
+  </p>
+</section>
+
+<!-- HIGHLIGHTS -->
+<section>
+  <h2 class="section-title">Why Choose Us</h2>
+  <div class="grid">
+    <div class="card">✔ Experienced Drivers</div>
+    <div class="card">✔ Clean & Comfortable Vehicles</div>
+    <div class="card">✔ Affordable Pricing</div>
+    <div class="card">✔ 24×7 Customer Support</div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <h2 class="section-title">Our Services</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Bus & Car Booking</h3>
+      <p style="color:var(--muted)">AC / Non-AC vehicles for all routes.</p>
+    </div>
+    <div class="card">
+      <h3>Tour Packages</h3>
+      <p style="color:var(--muted)">Family & group tour packages.</p>
+    </div>
+    <div class="card">
+      <h3>Outstation Travel</h3>
+      <p style="color:var(--muted)">Long-distance reliable travel.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ROUTES -->
+<section id="routes">
+  <h2 class="section-title">Popular Routes</h2>
+  <div class="grid">
+    <div class="card">Jhansi ⇄ Delhi</div>
+    <div class="card">Jhansi ⇄ Lucknow</div>
+    <div class="card">Jhansi ⇄ Kanpur</div>
+    <div class="card">Jhansi ⇄ Agra</div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-box">
+    <h2 class="section-title">Contact & Booking</h2>
+    <p style="color:var(--muted);margin-bottom:16px;">
+      Call or WhatsApp us for instant booking and inquiries.
+    </p>
+    <strong>📞 8601215830</strong><br>
+
+    <a class="insta" href="https://instagram.com/munnabhaiya_up93" target="_blank">
+      Follow on Instagram @munnabhaiya_up93
+    </a>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Travel Across India</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>✈️ Air Travel</h3>
+      <p style="color:var(--muted)">Domestic flights across all major Indian cities.</p>
+    </div>
+    <div class="card">
+      <h3>🚌 Bus Services</h3>
+      <p style="color:var(--muted)">Comfortable bus travel for long routes.</p>
+    </div>
+    <div class="card">
+      <h3>🚗 Car & Taxi</h3>
+      <p style="color:var(--muted)">Local & outstation taxi services.</p>
+    </div>
+    <div class="card">
+      <h3>🛣️ Road Trips</h3>
+      <p style="color:var(--muted)">Scenic highway journeys across India.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Popular Routes All Over India</h2>
+  <div class="grid">
+    <div class="card">Delhi ⇄ Mumbai</div>
+    <div class="card">Delhi ⇄ Kolkata</div>
+    <div class="card">Mumbai ⇄ Goa</div>
+    <div class="card">Chennai ⇄ Bangalore</div>
+    <div class="card">Jhansi ⇄ Ayodhya</div>
+    <div class="card">Varanasi ⇄ Prayagraj</div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Mandir & Religious Tours</h2>
+  <div class="grid">
+    <div class="card">🛕 Ayodhya Ram Mandir</div>
+    <div class="card">🛕 Kashi Vishwanath</div>
+    <div class="card">🛕 Mathura – Vrindavan</div>
+    <div class="card">🛕 Vaishno Devi</div>
+    <div class="card">🛕 Tirupati Balaji</div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Monu Kushwaha Travels · Powered by Orren Creations Private Limited
+</footer>
+
+</body>
+</html>
